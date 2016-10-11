@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
-# Better Errors
-gem 'better_errors'
+
 # awesome print
 gem 'awesome_print'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -46,4 +45,7 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  # Better Errors
+  gem 'better_errors'
 end
