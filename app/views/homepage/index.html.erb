@@ -1,0 +1,42 @@
+<h1>Meeeeedium's Media Ranker</h1>
+
+<h2>Netflix</h2>
+  <% i = 0 %>
+  <% @netflixes.each do |netflix|  %>
+    <article>
+      <h3><%= link_to(netflix.name, netflixshow_path(netflix.id)) %></h3>
+      <% i += 1 %>
+      <% break if i == 10 %>
+    </article>
+  <% end %>
+
+  <p><%= button_to('See more Netflix', netflixindex_path, method: :get) %></p>
+
+
+
+<h2>Books</h2>
+  <% i = 0 %>
+  <% @books.each do |book|  %>
+    <article>
+      <h3><%= link_to(book.name, booksshow_path(book.id)) %></h3>
+      <% i += 1 %>
+      <% break if i == 10 %>
+    </article>
+  <% end %>
+
+  <p><%= button_to('See more books', booksindex_path, method: :get) %></p>
+
+
+
+
+<h2>Capstone Project Ideas</h2>
+  <% i = 0 %>
+  <% @capstones.each do |capstone|  %>
+    <article>
+      <h3><%= link_to(capstone.name, capstoneshow_path(capstone.id)) %></h3>
+      <% i += 1 %>
+      <% break if i == 10 %>
+    </article>
+  <% end %>
+
+  <p><%= button_to('See more Capstones', capstoneindex_path, method: :get) %></p>
