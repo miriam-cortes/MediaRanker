@@ -36,7 +36,8 @@ class NetflixControllerTest < ActionController::TestCase
   end
 
   test "should be able to update a movie" do
-    patch :update, { id: netflixes(:movietwo).id }
+    patch :update, :id => netflixes(:movieone), :netflix => {description: "a movie suggestion"}
+    assert_equal "a movie suggestion", assigns(:netflix).description
     assert_response :success
   end
 
