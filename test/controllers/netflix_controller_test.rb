@@ -42,7 +42,6 @@ class NetflixControllerTest < ActionController::TestCase
   end
 
   test "should be able to delete" do
-    post_params = { netflix: {name: "netflix1"} }
     delete :destroy, {id: netflixes(:movieone).id}
     assert_response :redirect
   end
@@ -52,5 +51,12 @@ class NetflixControllerTest < ActionController::TestCase
       delete :destroy, { id: netflixes(:movieone).id }
     end
   end
+
+  # test "should upvote correctly" do
+  #   assert_difference("Netflix.first.ranking", 1) do
+  #     post :upvote, netflixes(:movieone).upvote
+  #     assert_equal netflixes(:movieone).ranking, 2
+  #   end
+  # end
 
 end
