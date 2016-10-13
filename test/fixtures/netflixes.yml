@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
+movieone:
+  name: netflix1
   ranking: 1
-  genre: MyString
+  genre: comedy
   description: MyText
 
-two:
-  name: MyString
+movietwo:
+  name: netflix2
   ranking: 1
-  genre: MyString
+  genre: drama
   description: MyText
