@@ -13,7 +13,7 @@
         <tr>
           <th>Votes: <%= capstone.ranking %></th>
           <th><%= link_to(capstone.name, capstoneshow_path(capstone.id)) %></th>
-          <th><%= button_to('Upvote', capstoneupvote_path(capstone.id), method: :post) %></th>
+          <th><%= button_to('Upvote', capstoneupvote_path(capstone.id), :class => "button", method: :post) %></th>
         </tr>
       <% end %>
 
@@ -23,6 +23,6 @@
 </article>
 
 <ul>
-  <li><%= button_to('View all Meeeeedium', homepageindex_path, method: :get) %></li>
-  <li><%= button_to('Add a Capstone suggestion', capstonenew_path, method: :get) %></li>
+  <li><%= button_to('View all Meeeeedium', homepageindex_path,:class => "button",  method: :get) %></li>
+  <li><%= button_to('Add a Capstone suggestion', capstonenew_path, :class => "button", method: :get) %></li>
 </ul>

@@ -13,7 +13,7 @@
         <tr>
           <th>Votes: <%= netflix.ranking %></th>
           <th><%= link_to(netflix.name, netflixshow_path(netflix.id)) %></th>
-          <th><%= button_to('Upvote', netflixupvote_path(netflix.id), method: :post) %></th>
+          <th><%= button_to('Upvote', netflixupvote_path(netflix.id), :class => "button", method: :post) %></th>
         </tr>
       <% end %>
 
@@ -23,6 +23,6 @@
 </article>
 
 <ul>
-  <li><%= button_to('View all Meeeeedium', homepageindex_path, method: :get) %></li>
-  <li><%= button_to('Add a Netflix suggestion', netflixnew_path, method: :get) %></li>
+  <li><%= button_to('View all Meeeeedium', homepageindex_path,  :class => "button", method: :get) %></li>
+  <li><%= button_to('Add a Netflix suggestion', netflixnew_path,  :class => "button", method: :get) %></li>
 </ul>

@@ -6,14 +6,13 @@
       <% i = 0 %>
       <% @netflixes.each do |netflix|  %>
         <article>
-          <h3><%= link_to(netflix.name, netflixshow_path(netflix.id)) %></h3>
-          <h5>Votes: <%= netflix.ranking %></h5>
+          <h3><%= link_to(netflix.name, netflixshow_path(netflix.id)) %></h3><h5>Votes: <%= netflix.ranking %></h5>
           <% i += 1 %>
           <% break if i == top_how_many_to_show %>
         </article>
       <% end %>
 
-    <p><%= button_to('See more Netflix', netflixindex_path, method: :get) %></p>
+    <p><%= button_to('See more Netflix', netflixindex_path, :class => "button", method: :get) %></p>
   </article>
 
   <article class="columns small-11 medium-5 large-3">
@@ -28,7 +27,7 @@
         </article>
       <% end %>
 
-    <p><%= button_to('See more books', booksindex_path, method: :get) %></p>
+    <p><%= button_to('See more books', booksindex_path, :class => "button", method: :get) %></p>
   </article>
 
 
@@ -44,6 +43,6 @@
         </article>
       <% end %>
 
-    <p><%= button_to('See more Capstones', capstoneindex_path, method: :get) %></p>
+    <p><%= button_to('See more Capstones', capstoneindex_path, :class => "button", method: :get) %></p>
   </article>
 </div>

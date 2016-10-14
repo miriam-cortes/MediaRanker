@@ -13,7 +13,7 @@
         <tr>
           <th>Votes: <%= book.ranking %></th>
           <th><%= link_to(book.name, booksshow_path(book.id)) %></th>
-          <th><%= button_to('Upvote', booksupvote_path(book.id), method: :post) %></th>
+          <th><%= button_to('Upvote', booksupvote_path(book.id), :class => "button", method: :post) %></th>
         </tr>
       <% end %>
 
@@ -23,6 +23,6 @@
 </article>
 
 <ul>
-  <li><%= button_to('View all Meeeeedium', homepageindex_path, method: :get) %></li>
-  <li><%= button_to('Add a book suggestion', booksnew_path, method: :get) %></li>
+  <li><%= button_to('View all Meeeeedium', homepageindex_path, :class => "button", method: :get) %></li>
+  <li><%= button_to('Add a book suggestion', booksnew_path, :class => "button", method: :get) %></li>
 </ul>
