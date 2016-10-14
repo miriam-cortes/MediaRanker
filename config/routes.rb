@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
   post 'books/:id/upvote' => 'books#upvote', as: 'booksupvote'
 
-  delete 'books/destroy' => 'books#destroy', as: 'booksdestroy'
+  delete 'books/:id/destroy' => 'books#destroy', as: 'booksdestroy'
 
 
   get 'capstone/index' => 'capstone#index', as: 'capstoneindex'
@@ -32,7 +32,7 @@ Rails.application.routes.draw do
 
   post 'capstone/:id/upvote' => 'capstone#upvote', as: 'capstoneupvote'
 
-  delete 'capstone/destroy' => 'capstone#destroy', as: 'capstonedestroy'
+  delete 'capstone/:id/destroy' => 'capstone#destroy', as: 'capstonedestroy'
 
 
   get 'netflix/index' => 'netflix#index', as: 'netflixindex'
@@ -49,7 +49,7 @@ Rails.application.routes.draw do
 
   post 'netflix/:id/upvote' => 'netflix#upvote', as: 'netflixupvote'
 
-  delete 'netflix/destroy' => 'netflix#destroy', as: 'netflixdestroy'
+  delete 'netflix/:id/destroy' => 'netflix#destroy', as: 'netflixdestroy'
 
 
   get 'homepage/index', as: 'homepageindex'
