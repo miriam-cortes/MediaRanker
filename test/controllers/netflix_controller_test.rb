@@ -52,10 +52,12 @@ class NetflixControllerTest < ActionController::TestCase
     end
   end
 
+  # WHY THIS TEST FAILS I DON'T KNOW!!! 
   # test "should upvote correctly" do
-  #   assert_difference("Netflix.first.ranking", 1) do
-  #     post :upvote, netflixes(:movieone).upvote
-  #     assert_equal netflixes(:movieone).ranking, 2
+  # assert_difference("Netflix.find(netflixes(:movieone).id).ranking", 1) do
+  #     post_params = {id: netflixes(:movieone).id}
+  #     @request.env['HTTP_REFERER'] = '/netflixes/show'
+  #     post :upvote, post_params
   #   end
   # end
 
