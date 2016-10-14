@@ -1,7 +1,7 @@
 <% top_how_many_to_show = 5 %>
 
-<div class="row small-up-1 medium-up-2 large-up-3" >
-  <article class="columns small-11 medium-5 large-3">
+<div class="row small-up-1 medium-up-2 large-up-3">
+  <div class="column">
     <h2>Netflix</h2>
       <% i = 0 %>
       <% @netflixes.each do |netflix|  %>
@@ -13,9 +13,9 @@
       <% end %>
 
     <p><%= button_to('See more Netflix', netflixindex_path, :class => "button", method: :get) %></p>
-  </article>
+  </div>
 
-  <article class="columns small-11 medium-5 large-3">
+  <div class="column">
     <h2>Books</h2>
       <% i = 0 %>
       <% @books.each do |book|  %>
@@ -28,10 +28,10 @@
       <% end %>
 
     <p><%= button_to('See more books', booksindex_path, :class => "button", method: :get) %></p>
-  </article>
+  </div>
 
 
-  <article class="columns small-11 medium-5 large-3">
+  <div class="column">
     <h2>Capstone Project Ideas</h2>
       <% i = 0 %>
       <% @capstones.each do |capstone|  %>
@@ -44,5 +44,5 @@
       <% end %>
 
     <p><%= button_to('See more Capstones', capstoneindex_path, :class => "button", method: :get) %></p>
-  </article>
+  </div>
 </div>
