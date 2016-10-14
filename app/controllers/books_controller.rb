@@ -30,7 +30,7 @@ class BooksController < ApplicationController
   def update
     edit
 
-    if @book.update(name: params[:book][:name], description: params[:book][:description], genrey: params[:book][:genre])
+    if @book.update(name: params[:book][:name], description: params[:book][:description], genre: params[:book][:genre])
       redirect_to action: "show"
     else
       render 'edit'

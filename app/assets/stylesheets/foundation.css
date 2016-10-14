@@ -1627,7 +1627,7 @@ textarea::placeholder {
 input:disabled, input[readonly],
 textarea:disabled,
 textarea[readonly] {
-  background-color: #e6e6e6;
+  background-color: #ffffb3;
   cursor: not-allowed; }
 
 [type='submit'],
@@ -1832,7 +1832,7 @@ select {
   display: none;
   border: 1px solid #e6e6e6;
   border-bottom: 0;
-  background-color: #fefefe;
+  background-color: #ffffb3;
   color: #0a0a0a; }
   :last-child > .accordion-content:last-child {
     border-bottom: 1px solid #e6e6e6; }
