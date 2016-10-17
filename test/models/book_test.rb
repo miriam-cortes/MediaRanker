@@ -4,4 +4,18 @@ class BookTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
+
+  test "A book must have a name, genre, and description" do
+    books(:one).valid?
+    books(:one).name = nil
+    assert_not books(:one).valid?
+    books(:one).genre = nil
+    assert_not books(:one).valid?
+    books(:one).description = nil
+    assert_not books(:one).valid?
+  end
+
+  test "the correct number of fiction books" do
+    assert_equal books(:one).genre.length, 1
+  end
 end
