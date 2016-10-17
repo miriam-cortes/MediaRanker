@@ -14,4 +14,8 @@ class BookTest < ActiveSupport::TestCase
     books(:one).description = nil
     assert_not books(:one).valid?
   end
+
+  test "the correct number of fiction books" do
+    assert_equal books(:one).genre.length, 1
+  end
 end
