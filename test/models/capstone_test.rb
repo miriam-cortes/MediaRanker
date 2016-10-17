@@ -4,4 +4,11 @@ class CapstoneTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
+  test "A capstone must have a name and description" do
+    capstones(:one).valid?
+    capstones(:one).name = nil
+    assert_not capstones(:one).valid?
+    capstones(:one).description = nil
+    assert_not capstones(:one).valid?
+  end
 end
