@@ -9,5 +9,9 @@ class BookTest < ActiveSupport::TestCase
     books(:one).valid?
     books(:one).name = nil
     assert_not books(:one).valid?
+    books(:one).genre = nil
+    assert_not books(:one).valid?
+    books(:one).description = nil
+    assert_not books(:one).valid?
   end
 end
